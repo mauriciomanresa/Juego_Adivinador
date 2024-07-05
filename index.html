@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUEGO ADIVINADOR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="imagen">
+        <img src="./img/mago.jpg" alt="Mago-Adivinador" id="mago" />
+      </div>
+      <div class="juego">
+        <h1>ADIVINA EL NUMERO ...</h1>
+        <p>Introduce un número entre 1 y 100:</p>
+        <input type="number" id="numeroEntrada" onclick="limpiar()" onkeydown="handleEnter(event)"/>
+        <button onclick="chequear()">Comprobar...</button>
+        <p id="mensaje"></p>
+        <div id="intentos-container">
+          <span>Cantidad de Intentos:</span>
+          <span id="intento">0</span>
+        </div>
+      </div>
+    </section>
+    <script src="scrypt.js"></script>
+  </body>
+</html>
