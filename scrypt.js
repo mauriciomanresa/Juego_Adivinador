@@ -1,7 +1,7 @@
-// Seleccionar un número al azar
+// Selecciona un número al azar
 let numeroAzar = Math.floor(Math.random() * 100) + 1;
 
-// Definir variables
+// Defino variables
 let numeroEntrada = document.getElementById("numeroEntrada");
 let mensaje = document.getElementById("mensaje");
 let intentoLabel = document.querySelector("#intentos-container span");
@@ -10,7 +10,7 @@ let intentos = 0;
 let boton = document.querySelector("button");
 let magoImagen = document.getElementById("mago");
 
-// Función para verificar el número ingresado
+// Verificar el número ingresado
 function chequear() {
   intentos++;
   intento.textContent = intentos;
@@ -32,7 +32,7 @@ function chequear() {
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
 
-    // Ocultar elemntos cuando ganas
+    // Ocultar elementos cuando ganas
     magoImagen.style.display = "none";
     document.querySelector(".juego h1").style.display = "none";
     document.querySelector(".juego p").style.display = "none";
@@ -44,7 +44,7 @@ function chequear() {
     boton.style.display = "block";
     boton.style.margin = "20px auto";
 
-    // Agregar clase para el efecto de hundimiento
+    // Efecto del botón
     boton.classList.add("button-clicked");
 
     // Cambiar texto del botón y añadir evento para reiniciar juego
@@ -58,7 +58,7 @@ function chequear() {
   }
 }
 
-// Función para reiniciar el juego
+// Reiniciar el juego
 function reiniciarJuego() {
   window.location.reload();
 }
@@ -68,7 +68,7 @@ function limpiar() {
   numeroEntrada.value = "";
 }
 
-// Función para manejar la pulsación de tecla "Enter"
+// Manejo de la tecla "Enter"
 function handleEnter(event) {
   if (event.key === "Enter") {
     chequear();
